@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Where Should We Eat?</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <section id="welcomeSection">
+        <div class="blob-container">
+            <div class="blob">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                    <defs>
+                        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" style="stop-color: rgb(254, 0, 242);"></stop>
+                            <stop offset="100%" style="stop-color: rgb(251, 8, 33);"></stop>
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#gradient)">
+                        <animate attributeName="d"
+                                 dur="15"
+                                 repeatCount="indefinite"
+                                 values="M422,308Q430,366,378,391Q326,416,272,445Q218,474,177,427.5Q136,381,118,337.5Q100,294,57.5,237.5Q15,181,81.5,156.5Q148,132,186.5,105.5Q225,79,270.5,92.5Q316,106,349.5,135.5Q383,165,398.5,207.5Q414,250,422,308Z;
+                M423.5,302Q412,354,374,396Q336,438,282,422Q228,406,188,387Q148,368,79.5,344Q11,320,20,252.5Q29,185,87,157Q145,129,182.5,86.5Q220,44,285.5,36Q351,28,401,74.5Q451,121,443,185.5Q435,250,423.5,302Z;
+                M440,295Q389,340,358,379.5Q327,419,272.5,447Q218,475,184,420Q150,365,109.5,334Q69,303,80,253Q91,203,92,135.5Q93,68,159.5,74Q226,80,278,77.5Q330,75,353.5,121.5Q377,168,434,209Q491,250,440,295Z;
+                M424.5,301Q409,352,361,369.5Q313,387,270,400Q227,413,157.5,425Q88,437,53.5,377.5Q19,318,60.5,262.5Q102,207,123,167Q144,127,186,111Q228,95,288.5,64Q349,33,381.5,88.5Q414,144,427,197Q440,250,424.5,301Z;
+                M429.5,307Q427,364,371.5,379.5Q316,395,265.5,444Q215,493,173.5,440Q132,387,104.5,344Q77,301,57.5,244.5Q38,188,64,126.5Q90,65,156.5,65Q223,65,276,71.5Q329,78,362,117.5Q395,157,413.5,203.5Q432,250,429.5,307Z;
+                M422,308Q430,366,378,391Q326,416,272,445Q218,474,177,427.5Q136,381,118,337.5Q100,294,57.5,237.5Q15,181,81.5,156.5Q148,132,186.5,105.5Q225,79,270.5,92.5Q316,106,349.5,135.5Q383,165,398.5,207.5Q414,250,422,308Z">
+                        </animate>
+                    </path>
+                </svg>
+            </div>
+            <div class="button-container">
+                <button id="getStartedButton">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const getStartedButton = document.getElementById("getStartedButton");
+            const welcomeSection = document.getElementById("welcomeSection");
+            const blob = document.querySelector(".blob");
+
+            // Function to fade out the blob
+            function fadeOutBlob() {
+                blob.style.transition = "opacity 1s ease-out";
+                blob.style.opacity = "0"; // Set the opacity to 0 for fade out effect
+            }
+
+            // Function to hide the welcome section and show the game section
+            function showGameSection() {
+                welcomeSection.style.display = "none";
+            }
+
+            // Add click event listener to the "Get Started" button
+            getStartedButton.addEventListener("click", function() {
+                fadeOutBlob(); // Assume you have defined this function to fade out the blob
+                // Call the function to show the game section
+                showGameSection();
+            });
+        });
+    </script>
+</body>
+</html>
